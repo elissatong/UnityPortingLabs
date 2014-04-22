@@ -67,7 +67,10 @@
      <Compile Include="Assets\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\WP8\CollectionsManager.cs" />
      <Compile Include="Assets\Scripts\WP8\FileManager.cs" />
+     <Compile Include="Assets\Scripts\WP8\ReflectionManager.cs" />
+     <Compile Include="Assets\Scripts\WP8\StoreManager.cs" />
      <Compile Include="Assets\Scripts\WP8\WeChatManager.cs" />
  <Reference Include="UnityPlugins">
  <HintPath>Assets\Plugins\UnityPlugins.dll</HintPath>
