@@ -1,0 +1,63 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        LoadXmlLinq
+      </Title>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Code Language="CSharp">
+        <![CDATA[#region Method 3 Xml Linq
+
+        public void LoadXmlLinq(string filename)
+        {
+            XDocument doc = XDocument.Load(filename);
+
+            List<FlipTile> listFlip = new List<FlipTile>();
+
+            IEnumerable<XElement> tiles = doc.Elements();
+            foreach (var tile in tiles)
+            {
+                var node2 = tile.FirstNode;
+                IEnumerable<XElement> flips = tile.Elements();
+                foreach (var flip in flips)
+                {
+                    IEnumerable<XElement> desc = flips.Descendants();
+                    foreach (var d in desc)
+                    {
+                        // Prints out all the template properties
+                        string val = d.Value;
+                    }
+
+                    //listFlip.Add(
+                    //    new FlipTile(
+                            
+                    //        flip.("SmallBackgroundImage").Value,
+                    //        flip.Element("WideBackgroundImage").Value,
+                    //        flip.Element("WideBackBackgroundImage").Value,
+                    //        flip.Element("WideBackContent").Value,
+                    //        flip.Element("BackgroundImage").Value,
+                    //        0,
+                    //        flip.Element("Title").Value,
+                    //        flip.Element("BackBackgroundImage").Value,
+                    //        flip.Element("BackTitle").Value,
+                    //        flip.Element("BackContent").Value
+                    //        )
+                    //    );
+
+                }
+
+            }
+
+        }
+        #endregion // Method 3 Xml Linq]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

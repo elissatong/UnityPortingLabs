@@ -1,0 +1,36 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        InitializeFlipTile
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private void InitializeFlipTile()
+        {   
+            ShellTile pinnedDefault = ShellTile.ActiveTiles.First();
+            if (pinnedDefault != null)
+            {
+                FlipTileData tileData = new FlipTileData()
+                {
+                    Title = "Humans vs. Aliens",
+                    BackTitle = "Earn rewards",
+                    BackContent = "Play with your friends today!",
+                    WideBackContent = "Play with your friends today!",
+                    Count = 10,
+                    SmallBackgroundImage = new Uri("Assets/Tiles/Shanghai/FlipCycleTileSmall.png", UriKind.Relative),
+                    BackgroundImage = new Uri("Assets/Tiles/Shanghai/FlipCycleTileMedium.png", UriKind.Relative),
+                    BackBackgroundImage = new Uri("Assets/Tiles/Shanghai/BackFlipCycleTileMedium.png", UriKind.Relative),
+                    WideBackgroundImage = new Uri("Assets/Tiles/Shanghai/FlipCycleTileLarge.png", UriKind.Relative),
+                    WideBackBackgroundImage = new Uri("Assets/Tiles/Shanghai/BackFlipCycleTileLarge.png", UriKind.Relative),
+                };
+
+                pinnedDefault.Update(tileData);
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

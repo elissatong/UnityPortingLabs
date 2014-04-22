@@ -1,0 +1,21 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        PlayerControl
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[#if (UNITY_WP8 && !UNITY_EDITOR)
+	public float jumpForce = 200f;			// Amount of force added when the player jumps.
+    public int PlayerSpeed = 20;
+#else
+    public float jumpForce = 1000f;
+    public int PlayerSpeed = 10;
+#endif]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

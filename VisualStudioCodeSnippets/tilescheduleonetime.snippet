@@ -1,0 +1,24 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        TileScheduleOneTime
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private void TileScheduleOneTime()
+        {
+            ShellTileSchedule tileSchedule = new ShellTileSchedule();
+            tileSchedule.Recurrence = UpdateRecurrence.Onetime;
+            tileSchedule.StartTime = DateTime.Now;
+            string imageUri = GetImageUri();
+            tileSchedule.RemoteImageUri = new Uri(imageUri);
+
+            tileSchedule.Start();
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

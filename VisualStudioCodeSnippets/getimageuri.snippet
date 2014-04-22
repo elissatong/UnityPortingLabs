@@ -1,0 +1,23 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        GetImageUri
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private string GetImageUri()
+        {
+            // You can add images from a website or database:
+            // Images name mission01.jpg to mission06.jpg
+            Random rnd = new Random();
+            int imageId = rnd.Next(1, 7);
+            string imageUri = "http://unityportinglab.azurewebsites.net/images/mission" + imageId.ToString() + ".jpg";
+            return imageUri;
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

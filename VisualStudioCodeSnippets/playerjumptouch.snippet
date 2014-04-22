@@ -1,0 +1,28 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        PlayerJumpTouch
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[if (Application.platform == RuntimePlatform.WP8Player)
+        {
+            if (grounded && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                jump = true;
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Jump") && grounded)
+            {
+                jump = true;
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

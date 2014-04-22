@@ -1,0 +1,68 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        ExtendSplashScreen
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[using System.Windows.Threading;
+using System.Threading.Tasks;
+
+private DispatcherTimer extendedSplashTimer;
+        private bool isUnityLoaded;
+        
+        
+        #region ExtendedSplashScreen
+
+        private void InitializeExtendedSplash()
+        {
+            // ensure we listen to when unity tells us game is ready
+            WindowsGateway.UnityLoaded = OnUnityLoaded;
+            // create extended splash timer
+            extendedSplashTimer = new DispatcherTimer();
+            extendedSplashTimer.Interval = TimeSpan.FromMilliseconds(100);
+            extendedSplashTimer.Tick += ExtendedSplashTimer_Tick;
+            extendedSplashTimer.Start();
+        }
+        private async void OnUnityLoaded()
+        {
+            isUnityLoaded = true;
+        }
+
+        async void ExtendedSplashTimer_Tick(object sender, object e)
+        {
+            var increment = extendedSplashTimer.Interval.TotalMilliseconds;
+            if (!isUnityLoaded && SplashProgress.Value <= (SplashProgress.Maximum - increment))
+            {
+                SplashProgress.Value += increment;
+            }
+            else
+            {
+                SplashProgress.Value = SplashProgress.Maximum;
+                await Task.Delay(250); // force delay so user can see progress bar maxing out very briefly
+                RemoveExtendedSplash();
+            }
+        }
+
+        public void RemoveExtendedSplash()
+        {
+            if (extendedSplashTimer != null)
+            {
+                extendedSplashTimer.Stop();
+            }
+            if (DrawingSurfaceBackground.Children.Count > 0)
+            {
+                DrawingSurfaceBackground.Children.Remove(ExtendedSplashGrid);
+            }
+
+            DrawScene();
+        }
+
+        #endregion]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,56 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        InitializeFlipTileXml
+      </Title>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Code Language="CSharp">
+        <![CDATA[private void InitializeFlipTileXml()
+        {
+            FlipTemplateManager flipManager = new FlipTemplateManager();
+            if (flipManager != null)
+            {
+                flipManager.LoadXml("Assets/Xmls/tiletemplates.xml");
+
+                if (flipManager.TilesDb != null && flipManager.TilesDb.Tiles != null)
+                {
+                    int count = flipManager.TilesDb.Tiles.Count();
+
+                    Random rnd = new Random();
+                    int tileId = rnd.Next(count);
+                    FlipTile template = flipManager.TilesDb.Tiles[tileId];
+
+                    ShellTile pinnedDefault = ShellTile.ActiveTiles.First();
+                    if (pinnedDefault != null)
+                    {
+                        FlipTileData tileData = new FlipTileData()
+                        {
+                            Title = template.Title,
+                            BackTitle = template.BackTitle,
+                            BackContent = template.BackContent,
+                            WideBackContent = template.WideBackContent,
+                            Count = template.Count,
+                            SmallBackgroundImage = new Uri(template.SmallBackgroundImage, UriKind.Relative),
+                            BackgroundImage = new Uri(template.BackgroundImage, UriKind.Relative),
+                            BackBackgroundImage = new Uri(template.BackBackgroundImage, UriKind.Relative),
+                            WideBackgroundImage = new Uri(template.WideBackgroundImage, UriKind.Relative),
+                            WideBackBackgroundImage = new Uri(template.WideBackBackgroundImage, UriKind.Relative),
+                        };
+
+                        pinnedDefault.Update(tileData);
+                    }
+                }
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
