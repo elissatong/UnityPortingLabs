@@ -84,12 +84,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="File.cs" />
+    <Compile Include="StoreManager.cs" />
     <Compile Include="WeChatSdk.cs" />
     <Compile Include="WeiboSdk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MockIAPLib">
+      <HintPath>..\..\..\..\Unity3d\Projects\UnityPortingLabs01\WP8\_2Dv3\Assets\MockIAPLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

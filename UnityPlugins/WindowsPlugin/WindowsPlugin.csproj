@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="File.cs" />
+    <Compile Include="StoreManager.cs" />
     <Compile Include="WeChatSdk.cs" />
     <Compile Include="WeiboSdk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

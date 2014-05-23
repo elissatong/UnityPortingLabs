@@ -1,4 +1,0 @@
-D:\Unity3d\Projects\UnityPortingLabs\UnityPlugins\WP8Plugin\Bin\x86\Debug\UnityPlugins.dll
-D:\Unity3d\Projects\UnityPortingLabs\UnityPlugins\WP8Plugin\Bin\x86\Debug\UnityPlugins.pdb
-D:\Unity3d\Projects\UnityPortingLabs\UnityPlugins\WP8Plugin\obj\x86\Debug\UnityPlugins.dll
-D:\Unity3d\Projects\UnityPortingLabs\UnityPlugins\WP8Plugin\obj\x86\Debug\UnityPlugins.pdb

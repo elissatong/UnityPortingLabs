@@ -19,7 +19,6 @@ public class FileManager : MonoBehaviour
             
         }
 
-
         WWW wwwText = new WWW("http://unityportinglab.azurewebsites.net/tilestemplateshort.xml");
         yield return wwwText;
         if (wwwText.isDone)

@@ -1,0 +1,30 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DGuiButton
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private string m_Text;
+		
+		public void OnGUI()
+	{
+		GUI.Label(new Rect(10, 10, Screen.width - 20, 30), m_Text);
+		
+		if (GUI.Button(new Rect(10, 50, 240, 80), "Button"))
+		{
+			ClickedButton();
+		}
+	}
+	
+	private void ClickedButton()
+	{
+		m_Text = "Set some text";
+	}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

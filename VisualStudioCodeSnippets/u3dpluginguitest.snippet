@@ -1,0 +1,32 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DPluginGuiTest
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private Rect m_ScreenRectangle;
+	private string m_DeviceName;
+	private GUIStyle m_GUIStyle;
+
+	// Use this for initialization
+	void Start () {
+
+		m_ScreenRectangle = new Rect (0, 0, Screen.width, Screen.height);
+		m_DeviceName = UnityPluginForWP.Class1.GetDeviceName;
+        m_GUIStyle = new GUIStyle();
+        m_GUIStyle.fontSize = 32;
+        m_GUIStyle.fontStyle = FontStyle.Bold;
+	}
+	
+    void OnGUI()
+    {
+        GUI.Label(m_ScreenRectangle, m_DeviceName, m_GUIStyle);
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
