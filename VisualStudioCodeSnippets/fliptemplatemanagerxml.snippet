@@ -1,0 +1,164 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        FlipTemplateManagerXml
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+// Method 1
+using System.Xml.Serialization;
+
+// Method 2
+//using System.Xml.Linq;
+
+// Method 3: NOT available in .NET for Windows Phone 8 
+//using System.Xml.XmlDocument;
+
+namespace _2Dv3.Code
+{
+    
+    [XmlRootAttribute("TilesDb", IsNullable = false)]
+    public class FlipTemplateDb
+    {
+        private FlipTile[] tiles = null;
+        public FlipTile[] Tiles
+        {
+            get
+            {
+                return tiles;
+            }
+            set
+            {
+                tiles = value;
+            }
+        }
+
+    }
+    public class FlipTile
+    {
+        public string SmallBackgroundImage;
+        public string WideBackgroundImage;
+        public string WideBackBackgroundImage;
+        public string WideBackContent;
+        public string BackgroundImage;
+        public int Count;
+        public string Title;
+        public string BackBackgroundImage;
+        public string BackTitle;
+        public string BackContent;
+
+        public FlipTile()
+        {
+
+        }
+
+        public FlipTile(string smi, string wbi, string wbbi, string wbc, string bi, int c, string t, string bbi, string bt, string bc)
+        {
+            SmallBackgroundImage = smi;
+            WideBackgroundImage = wbi;
+            WideBackBackgroundImage = wbbi;
+            WideBackContent = wbc;
+            BackgroundImage = bi;
+            Count = c;
+            Title = t;
+            BackBackgroundImage = bbi;
+            BackTitle = bt;
+            BackContent = bc;
+            
+        }
+    }
+
+    public class FlipTemplateManager
+    {
+        private FlipTemplateDb tilesDb = null;
+        public FlipTemplateDb TilesDb
+        {
+            get
+            {
+                return tilesDb;
+            }
+            set
+            {
+                tilesDb = value;
+            }
+        }
+
+        #region Method 1 Serialization
+
+        public void LoadXml(string filename)
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(FlipTemplateDb));
+
+                // A FileStream is needed to read the XML document.
+                FileStream fs = new FileStream(filename, FileMode.Open);
+
+                // Uses the Deserialize method to restore the object's state 
+                // with data from the XML document.
+                tilesDb = (FlipTemplateDb)serializer.Deserialize(fs);
+
+                int count = tilesDb.Tiles.Count();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        public void WriteXml(string filename)
+        {
+
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(FlipTemplateDb));
+                TextWriter writer = new StreamWriter(filename);
+
+                FlipTile tile = new FlipTile();
+                tile.BackBackgroundImage = "BackBackgroundImage";
+                tile.BackContent = "BackContent";
+                tile.BackgroundImage = "BackgroundImage";
+                tile.BackTitle = "BackTitle";
+                tile.Count = 10;
+                tile.SmallBackgroundImage = "SmallBackgroundImage";
+                tile.WideBackBackgroundImage = "WideBackBackgroundImage";
+                tile.WideBackContent = "WideBackContent";
+                tile.WideBackgroundImage = "WideBackgroundImage";
+
+                FlipTemplateDb mDb = new FlipTemplateDb();
+                FlipTile[] flipTiles = { tile, tile };
+                mDb.Tiles = flipTiles;
+
+                // Serializes the purchase order, and closes the TextWriter.
+                serializer.Serialize(writer, mDb);
+                writer.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        #endregion // #region Method 1 Serialization
+
+        
+
+    }
+}
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
