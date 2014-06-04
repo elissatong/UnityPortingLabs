@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MockIAPLib</id>
+    <version>1.0.0.0</version>
+    <title>MockIAPLib</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://en.wikipedia.org/wiki/Microsoft_Public_License#Microsoft_Limited_Public_License_.28Ms-LPL.29</licenseUrl>
+    <projectUrl>http://code.msdn.microsoft.com/wpapps/Mock-In-App-Purchase-33080f0c</projectUrl>
+    <iconUrl>http://social.microsoft.com/profile/u/avatar.jpg?displayname=official+windows+platform+sample&amp;size=extralarge&amp;version=ca7501ed-22ad-406c-90ef-75c79a91b143</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A mock in app purchase library to test in app purchases without needing to submit your app to the store</description>
+    <summary>A mock in app purchase library to test in app purchases</summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>wp8 wp81 iap windowsphone mock</tags>
+  </metadata>
+</package>

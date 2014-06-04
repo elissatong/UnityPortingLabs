@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<ProductListings>
+  <ProductListing Key="productA" Purchased="true" Fulfilled="true">
+    <Name>Product A</Name>
+    <Description>A sample product listing A</Description>
+    <ProductId>productA</ProductId>
+    <ProductType>Consumable</ProductType>
+    <FormattedPrice>$1.00</FormattedPrice>
+    <ImageUri>ms-appdata:\\producta.png</ImageUri>
+    <Keywords>test;product</Keywords>
+    <Tag>Additional text A</Tag>
+  </ProductListing>
+  <ProductListing Key="productB" Purchased="true" Fulfilled="true">
+    <Name>Product B</Name>
+    <Description>A sample product listing B</Description>
+    <ProductId>productB</ProductId>
+    <ProductType>Consumable</ProductType>
+    <FormattedPrice>$2.00</FormattedPrice>
+    <ImageUri></ImageUri>
+    <Keywords>test;product</Keywords>
+    <Tag>Additional text B</Tag>
+  </ProductListing>
+  <ProductListing Key="productC" Purchased="true" Fulfilled="true">
+    <Name>Product C</Name>
+    <Description>A sample product listing C</Description>
+    <ProductId>productC</ProductId>
+    <ProductType>Consumable</ProductType>
+    <FormattedPrice>$3.00</FormattedPrice>
+    <ImageUri></ImageUri>
+    <Keywords>test;product</Keywords>
+    <Tag>Additional text C</Tag>
+  </ProductListing>
+</ProductListings>

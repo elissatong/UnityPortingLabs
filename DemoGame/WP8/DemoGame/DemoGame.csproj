@@ -93,6 +93,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Code\DebugManager.cs" />
+    <Compile Include="Code\StoreManager.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -115,12 +116,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Xmls\MockupLicenseInfo.xml" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
@@ -161,6 +164,12 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonFx">
+      <HintPath>..\packages\JsonFx.2.0.1209.2802\lib\sl40-wp\JsonFx.dll</HintPath>
+    </Reference>
+    <Reference Include="MockIAPLib">
+      <HintPath>..\packages\MockIAPLib.1.0.0.0\lib\wp80\MockIAPLib.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>UnityEngine.dll</HintPath>
