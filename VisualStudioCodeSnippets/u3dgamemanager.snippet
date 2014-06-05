@@ -3,21 +3,22 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>
-        GameManagerReadOnly
+        U3DGameManager
       </Title>
     </Header>
     <Snippet>
       <Code Language="CSharp">
         <![CDATA[#region Instance
-    private static readonly GameManager instance = new GameManager();
-    private GameManager() { }
-
+    static GameManager _instance;
     public static GameManager Instance
     {
         get
         {
-            return instance;
+            if (_instance == null)
+                _instance = FindObjectOfType(typeof(GameManager)) as GameManager;
+            return _instance;
         }
+        set { _instance = value;} 
     }
     #endregion]]>
       </Code>

@@ -16,6 +16,7 @@ using System.Diagnostics;
 
 namespace DemoGame.Code
 {
+
     public class StoreManager
     {
         private ListingInformation mListingInformation = null;
