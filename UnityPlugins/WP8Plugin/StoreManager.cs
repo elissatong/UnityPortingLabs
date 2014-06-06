@@ -54,10 +54,11 @@ namespace UnityPlugins
             return result.Result;
         }
 
-        public static void BuyProduct(string productId)
+        public static bool BuyProduct(string productId)
         {
             var result = BuyProductAsync(productId);
             result.Wait();
+            return result.Result;
         }
 
         #endregion // UseAsyncCalls
@@ -81,7 +82,7 @@ namespace UnityPlugins
         }
         public static async Task<bool> BuyProductAsync(string productId)
         {
-            if (mListingInformation != null)
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
             {
                 var product = mListingInformation.ProductListings.FirstOrDefault(p => p.Value.ProductId == productId);
 
@@ -111,7 +112,7 @@ namespace UnityPlugins
 
         public static string GetProductName(int index)
         {
-            if (mListingInformation != null)
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
             {
                 ProductListing info = mListingInformation.ProductListings.Values.ElementAt(index);
                 return info.Name;
@@ -133,7 +134,7 @@ namespace UnityPlugins
 
         public static string GetProductPrice(int index)
         {
-            if (mListingInformation != null)
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
             {
                 ProductListing info = mListingInformation.ProductListings.Values.ElementAt(index);
                 return info.FormattedPrice;
@@ -144,7 +145,7 @@ namespace UnityPlugins
 
         public static Uri GetProduct(int index)
         {
-            if (mListingInformation != null)
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
             {
                 ProductListing info = mListingInformation.ProductListings.Values.ElementAt(index);
 
@@ -154,6 +155,14 @@ namespace UnityPlugins
             return null;
         }
 
+        public static int GetCount()
+        {
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
+            {
+                return mListingInformation.ProductListings.Values.Count();
+            }
+            return 0;
+        }
         #endregion //ProductDefinition
 
 

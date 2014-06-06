@@ -12,7 +12,6 @@ public class PlayerControl : MonoBehaviour
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
-	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
 	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
@@ -22,6 +21,14 @@ public class PlayerControl : MonoBehaviour
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
+
+#if (UNITY_WP8 && !UNITY_EDITOR)
+	public float jumpForce = 200f;			// Amount of force added when the player jumps.
+    public int PlayerSpeed = 20;
+#else
+    public float jumpForce = 1000f;
+    public int PlayerSpeed = 10;
+#endif
 
 
 	void Awake()
@@ -37,16 +44,35 @@ public class PlayerControl : MonoBehaviour
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
-		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded)
-			jump = true;
+        if (Application.platform == RuntimePlatform.WP8Player)
+        {
+            if (grounded && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                jump = true;
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Jump") && grounded)
+            {
+                jump = true;
+            }
+        }
 	}
 
 
 	void FixedUpdate ()
 	{
-		// Cache the horizontal input.
-		float h = Input.GetAxis("Horizontal");
+        float h = 0.0f;
+        if (Application.platform == RuntimePlatform.WP8Player)
+        {
+            h = (PlayerSpeed * Input.acceleration.x) * Time.deltaTime;
+        }
+        else
+        {
+            // Cache the horizontal input.
+            h = Input.GetAxis("Horizontal");
+        }
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));

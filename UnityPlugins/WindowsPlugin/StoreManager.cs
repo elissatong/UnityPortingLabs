@@ -18,19 +18,19 @@ namespace UnityPlugins
             return "N/A";
         }
 
-        public static void BuyProduct(string productId)
+        public static bool BuyProduct(string productId)
         {
-
+            return false;
         }
 
         public static string GetProductName(int index)
         {
-            return "Name";
+            return "Temp Name";
         }
 
         public static string GetProductDescription(int index)
         {
-            return "Description";
+            return "Temp Description";
         }
 
         public static string GetProductPrice(int index)
@@ -41,6 +41,11 @@ namespace UnityPlugins
         public static Uri GetProduct(int index)
         {
             return new Uri("http://cdn.marketplaceimages.windowsphone.com/v8/images/ad5ce88e-645d-4009-a477-884f6c465a35?hw=419527684&imagetype=icon_iap");
+        }
+
+        public static int GetCount()
+        {
+            return 0;
         }
     }
 }
