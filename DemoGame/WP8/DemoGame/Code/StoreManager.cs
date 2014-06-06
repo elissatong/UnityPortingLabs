@@ -170,6 +170,7 @@ namespace DemoGame.Code
             {
                 var product = mListingInformation.ProductListings.FirstOrDefault(p => p.Value.ProductId == productId); // && p.Value.ProductType == ProductType.Consumable);
 
+                
                 try
                 {
                     string receipt = await CurrentApp.RequestProductPurchaseAsync(product.Value.ProductId, true);

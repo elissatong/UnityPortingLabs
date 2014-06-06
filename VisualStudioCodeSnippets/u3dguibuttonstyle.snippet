@@ -1,0 +1,43 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DGuiButtonStyle
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[	public Texture2D normalButton = null;
+    public Texture2D hoverButton = null;
+
+	private GUIStyle m_GUIStyleBtn;
+		
+		// Add to Start()
+		m_GUIStyleBtn = new GUIStyle();
+        m_GUIStyleBtn.fontSize = 24;
+        m_GUIStyleBtn.fontStyle = FontStyle.Bold;
+
+        GUIStyleState styleNormal = new GUIStyleState();
+        styleNormal.background = normalButton;
+        
+        GUIStyleState styleHover = new GUIStyleState();
+        styleHover.background = hoverButton;
+
+        m_GUIStyleBtn.normal = styleNormal;
+        m_GUIStyleBtn.hover = styleHover;
+        m_GUIStyleBtn.alignment = TextAnchor.MiddleCenter;
+		
+		// Add to OnGUI()
+		void OnGUI()
+    {
+        if (GUI.Button(new Rect(XOFFSET, YOFFSETBTN, 200, 50), "Buy Product A", m_GUIStyleBtn))
+        {
+            UnityPlugins.StoreManager.BuyProduct("productA");
+        }
+    }
+		]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
