@@ -45,6 +45,8 @@ namespace UnityPlugins
         }
 
 
+
+
         #region UseAsyncCalls
 
         public static string GetListingInfo()
@@ -109,6 +111,17 @@ namespace UnityPlugins
         #endregion // AsyncWP8Api
 
         #region ProductDefinition
+
+        public static string GetProductId(int index)
+        {
+            if (mListingInformation != null && mListingInformation.ProductListings != null && mListingInformation.ProductListings.Count > 0)
+            {
+                ProductListing info = mListingInformation.ProductListings.Values.ElementAt(index);
+                return info.ProductId;
+            }
+
+            return "N/A";
+        }
 
         public static string GetProductName(int index)
         {

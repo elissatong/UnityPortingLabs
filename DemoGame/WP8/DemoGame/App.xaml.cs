@@ -25,7 +25,12 @@ namespace DemoGame
 		/// <returns>The root frame of the Phone Application.</returns>
 		public PhoneApplicationFrame RootFrame { get; private set; }
 
-		/// <summary>
+        #region NEW_CODE_FOR_DEMO
+
+        public static DemoGame.Code.StoreManager sStoreManager { get; private set; }
+
+        #endregion
+        /// <summary>
 		/// Constructor for the Application object.
 		/// </summary>
 		public App()
@@ -38,6 +43,9 @@ namespace DemoGame
 
 			// Phone-specific initialization
 			InitializePhoneApplication();
+
+            // Added new initializer for Game related managers
+            InitialitzeGameManagers();
 
 			// Show graphics profiling information while debugging.
 			if (System.Diagnostics.Debugger.IsAttached)
@@ -185,5 +193,13 @@ namespace DemoGame
 
 		#endregion
 
+        #region NEW_CODE_FOR_DEMO
+
+        private void InitialitzeGameManagers()
+        {
+            // We are initialize the WP8 StoreManager class, not the Unity scripted class of the same name.
+            sStoreManager = new DemoGame.Code.StoreManager();   
+        }
+        #endregion
     }
 }

@@ -23,6 +23,11 @@ namespace UnityPlugins
             return false;
         }
 
+        public static string GetProductId(int index)
+        {
+            return "Temp Id";
+        }
+
         public static string GetProductName(int index)
         {
             return "Temp Name";

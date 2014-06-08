@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("Press Play");
             Application.LoadLevel("Level");
+            WindowsGateway.OnClickPlay();
         }
     }
 }

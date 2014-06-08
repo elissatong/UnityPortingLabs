@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\WP8\ReflectionManager.cs" />
      <Compile Include="Assets\Scripts\WP8\StoreManager.cs" />
      <Compile Include="Assets\Scripts\WP8\WeChatManager.cs" />
+     <Compile Include="Assets\Scripts\WP8\WindowsGateway.cs" />
  <Reference Include="UnityPlugins">
  <HintPath>Assets\Plugins\UnityPlugins.dll</HintPath>
  </Reference>

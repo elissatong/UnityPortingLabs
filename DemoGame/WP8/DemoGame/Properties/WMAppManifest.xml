@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{659d66ba-1e3b-4fde-b303-4c0f01c85d17}" Title="DemoGame" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="DefaultCompany" Description="" Publisher="DefaultCompany" PublisherID="{36e0404a-2921-4b73-8632-3bf364496337}">
+  <App xmlns="" ProductID="{04b18286-8fb1-4369-bea9-7ca0f4ddb3eb}" Title="Unity Porting Labs Demo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Microsoft Game Labs" Description="" Publisher="Microsoft Game Labs" PublisherID="{6E28B35D-9BD6-497A-9465-357EC654678C}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -19,7 +19,7 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>DemoGame</Title>
+          <Title>UPLDemo</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>

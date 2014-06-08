@@ -33,8 +33,20 @@ namespace DemoGame
 			InitializeComponent();
 			bridge.Control = DrawingSurfaceBackground;
 
+            WindowsGateway.OnClickPlay = OnClickPlay;
             
 		}
+
+        private void OnClickPlay()
+        {
+            Dispatcher.BeginInvoke( () =>
+                {
+                    btnBuy.Visibility = System.Windows.Visibility.Collapsed;
+                    btnPause.Visibility = System.Windows.Visibility.Visible;
+                }
+            );
+            
+        }
 
 		private void DrawingSurfaceBackground_Loaded(object sender, RoutedEventArgs e)
 		{
@@ -65,6 +77,11 @@ namespace DemoGame
 		private void PhoneApplicationPage_BackKeyPress(object sender, CancelEventArgs e)
 		{
 			e.Cancel = UnityApp.BackButtonPressed();
+
+            
+            btnBuy.Visibility = System.Windows.Visibility.Visible;
+            btnPause.Visibility = System.Windows.Visibility.Collapsed;
+            
 		}
 
 		private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
@@ -116,6 +133,16 @@ namespace DemoGame
             {
                 UnityApp.SetupGeolocator(null, null);
             }
+        }
+
+        private void OnClickPause(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnClickBuy(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Hud/StorePage.xaml", UriKind.Relative));
         }
 
 	}
