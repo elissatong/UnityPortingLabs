@@ -3,10 +3,16 @@ Unity Porting Labs
 
 Unity Porting Labs demo game and plugins
 
-Open: DemoGame/WP8/DemoGame.sln
-The Visual Studio solution will contain the Windows Phone solution file, Unity's scripting solution file, and the WP8 plugins solution files.
+How to Start:
+1. Clone the entire repository to your desktop.
+2. Begin by opening: DemoGame/WP8/DemoGame.sln
+3. When this Windows Phone 8 Visual Studio solution opens, notice that the Solution contains 4 projects.
+4. Assembly-CSharp-vs:  Unity generated solution with Unity based scripts
+5. DemoGame: Windows Phone 8 solution, built from Unity's Build Settings option. Set this project as the Startup Project to build out an XAP which can be published to the Windows Store.
+6. WindowsPlugin: a Unity plugin that contains the stubbed out version of the functions found in WP8Plugin.
+7. WP8Plugin: a Unity plugin that uses Windows Phone 8 API's. 
 
-Plugins are used to support Windows Phone features and API not available in Unity's scripting mode. Unity uses Mono .NET, which has APIs not available for Windows Phone .NET.
+By creating Unity plugins, you can call the functions in Unity scripts. When the game runs in Unity, it'll use the implementation found in WindowsPlugin. When the game runs on the Windows Phone emulator or devices, it'll use the implementation found in WP8Plugin. Plugins are used to support Windows Phone features and API not available in Unity's scripting mode. Unity uses Mono .NET, which has a subset of APIs not available for Windows Phone .NET.
 
 PLUGIN SUPPORT FOR WINDOWS PHONE 8:
 
