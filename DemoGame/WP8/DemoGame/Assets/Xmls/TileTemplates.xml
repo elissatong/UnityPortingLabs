@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TilesDb xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tiles>
+    <FlipTile>
+      <SmallBackgroundImage>Assets/LiveTiles/Shanghai/FlipCycleTileSmall.png</SmallBackgroundImage>
+      <WideBackgroundImage>Assets/LiveTiles/Shanghai/FlipCycleTileLarge.png</WideBackgroundImage>
+      <WideBackBackgroundImage>Assets/LiveTiles/Shanghai/BackFlipCycleTileLarge.png</WideBackBackgroundImage>
+      <WideBackContent>Beautiful view from the Bund</WideBackContent>
+      <BackgroundImage>Assets/LiveTiles/Shanghai/FlipCycleTileMedium.png</BackgroundImage>
+      <Count>1</Count>
+      <Title>Shanghai</Title>
+      <BackBackgroundImage>Assets/LiveTiles/Shanghai/BackFlipCycleTileMedium.png</BackBackgroundImage>
+      <BackTitle>Shanghai</BackTitle>
+      <BackContent>The Bund</BackContent>
+    </FlipTile>
+    <FlipTile>
+      <SmallBackgroundImage>Assets/LiveTiles/Beijing/FlipCycleTileSmall.png</SmallBackgroundImage>
+      <WideBackgroundImage>Assets/LiveTiles/Beijing/FlipCycleTileLarge.png</WideBackgroundImage>
+      <WideBackBackgroundImage>Assets/LiveTiles/Beijing/BackFlipCycleTileLarge.png</WideBackBackgroundImage>
+      <WideBackContent>Delicious snacks at Wangfujing Food Alley</WideBackContent>
+      <BackgroundImage>Assets/LiveTiles/Beijing/FlipCycleTileMedium.png</BackgroundImage>
+      <Count>12</Count>
+      <Title>Beijing</Title>
+      <BackBackgroundImage>Assets/LiveTiles/Beijing/BackFlipCycleTileMedium.png</BackBackgroundImage>
+      <BackTitle>Beijing</BackTitle>
+      <BackContent>Wangfujing Food Alley</BackContent>
+    </FlipTile>
+    <FlipTile>
+      <SmallBackgroundImage>Assets/LiveTiles/Chengdu/FlipCycleTileSmall.png</SmallBackgroundImage>
+      <WideBackgroundImage>Assets/LiveTiles/Chengdu/FlipCycleTileLarge.png</WideBackgroundImage>
+      <WideBackBackgroundImage>Assets/LiveTiles/Chengdu/BackFlipCycleTileLarge.png</WideBackBackgroundImage>
+      <WideBackContent>Pandas and tea make up for a relaxing trip.</WideBackContent>
+      <BackgroundImage>Assets/LiveTiles/Chengdu/FlipCycleTileMedium.png</BackgroundImage>
+      <Count>54</Count>
+      <Title>Chengdu</Title>
+      <BackBackgroundImage>Assets/LiveTiles/Chengdu/BackFlipCycleTileMedium.png</BackBackgroundImage>
+      <BackTitle>Chengdu</BackTitle>
+      <BackContent>Chengdu KuanXiangZi Alley</BackContent>
+    </FlipTile>
+    <FlipTile>
+      <SmallBackgroundImage>Assets/LiveTiles/Japan/FlipCycleTileSmall.png</SmallBackgroundImage>
+      <WideBackgroundImage>Assets/LiveTiles/Japan/FlipCycleTileLarge.png</WideBackgroundImage>
+      <WideBackBackgroundImage>Assets/LiveTiles/Japan/BackFlipCycleTileLarge.png</WideBackBackgroundImage>
+      <WideBackContent>Japan's hidden treasures at every corner</WideBackContent>
+      <BackgroundImage>Assets/LiveTiles/Japan/FlipCycleTileMedium.png</BackgroundImage>
+      <Count>99</Count>
+      <Title>Japan</Title>
+      <BackBackgroundImage>Assets/LiveTiles/Japan/BackFlipCycleTileMedium.png</BackBackgroundImage>
+      <BackTitle>Japan</BackTitle>
+      <BackContent>Japan's historic sights</BackContent>
+    </FlipTile>
+  </Tiles>
+</TilesDb>

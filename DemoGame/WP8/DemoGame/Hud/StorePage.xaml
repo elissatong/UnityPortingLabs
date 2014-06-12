@@ -30,7 +30,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Name="txtPurchaseMsg" Text="Current Purchases: None" />
             <TextBlock Name="txtProductsList" Text="List of Products:" Margin="0,30,0,0"/>
-            <phone:LongListSelector Name="llsProducts" Margin="12,40,12,12">
+            <phone:LongListSelector Name="llsProducts" Margin="12,60,12,12">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <StackPanel HorizontalAlignment="Left" Tag="{Binding ProductId}">
@@ -42,9 +42,9 @@
                             <TextBlock Text="{Binding Name}" />
                             <TextBlock Text="{Binding Description}" />
                             <TextBlock Text="{Binding FormattedPrice}" />
-                            <Button Name="btnShop" BorderThickness="0" Width="100" Height="100" Click="btnShop_Click">
+                            <Button Name="btnShop" BorderThickness="2" HorizontalAlignment="Left" Width="100" Height="100" Click="btnShop_Click">
                                 <Button.Background>
-                                    <ImageBrush ImageSource="/Assets/Hud/appbar.cart.png"/>
+                                    <ImageBrush ImageSource="/Assets/Hud/cart.png"/>
                                 </Button.Background>
                             </Button>
                             <Line Height="5" Stroke="White" StrokeThickness="2" X1="0" X2="1920" Margin="12" HorizontalAlignment="Stretch" />

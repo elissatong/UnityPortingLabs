@@ -93,6 +93,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Code\DebugManager.cs" />
+    <Compile Include="Code\FlipTemplateManager.cs" />
     <Compile Include="Code\StoreManager.cs" />
     <Compile Include="DataSource\ProductDataSource.cs" />
     <Compile Include="Hud\StorePage.xaml.cs">
@@ -133,7 +134,32 @@
   <ItemGroup>
     <Content Include="Assets\Hud\cart.png" />
     <Content Include="Assets\Hud\pause.png" />
+    <Content Include="Assets\LiveTiles\Beijing\BackFlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Beijing\BackFlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Beijing\BackFlipCycleTileSmall.png" />
+    <Content Include="Assets\LiveTiles\Beijing\FlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Beijing\FlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Beijing\FlipCycleTileSmall.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\BackFlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\BackFlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\BackFlipCycleTitleSmall.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\FlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\FlipCycleTitleMedium.png" />
+    <Content Include="Assets\LiveTiles\Chengdu\FlipCycleTitleSmall.png" />
+    <Content Include="Assets\LiveTiles\Japan\BackFlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Japan\BackFlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Japan\BackFlipCycleTitleSmall.png" />
+    <Content Include="Assets\LiveTiles\Japan\FlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Japan\FlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Japan\FlipCycleTileSmall.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\BackFlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\BackFlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\BackFlipCycleTileSmall.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\FlipCycleTileLarge.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\FlipCycleTileMedium.png" />
+    <Content Include="Assets\LiveTiles\Shanghai\FlipCycleTileSmall.png" />
     <Content Include="Assets\Xmls\MockupLicenseInfo.xml" />
+    <Content Include="Assets\Xmls\TileTemplates.xml" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">

@@ -47,6 +47,9 @@ namespace DemoGame
             // Added new initializer for Game related managers
             InitialitzeGameManagers();
 
+            // Change the live tile at each entrance to the game
+            InitializeFlipTileXml();
+
 			// Show graphics profiling information while debugging.
 			if (System.Diagnostics.Debugger.IsAttached)
 			{
@@ -200,6 +203,46 @@ namespace DemoGame
             // We are initialize the WP8 StoreManager class, not the Unity scripted class of the same name.
             sStoreManager = new DemoGame.Code.StoreManager();   
         }
+
+
+        private void InitializeFlipTileXml()
+        {
+            FlipTemplateManager flipManager = new FlipTemplateManager();
+            if (flipManager != null)
+            {
+                flipManager.LoadXml("Assets/Xmls/TileTemplates.xml");
+
+                if (flipManager.TilesDb != null && flipManager.TilesDb.Tiles != null)
+                {
+                    int count = flipManager.TilesDb.Tiles.Count();
+
+                    Random rnd = new Random();
+                    int tileId = rnd.Next(count);
+                    FlipTile template = flipManager.TilesDb.Tiles[tileId];
+
+                    ShellTile pinnedDefault = ShellTile.ActiveTiles.First();
+                    if (pinnedDefault != null)
+                    {
+                        FlipTileData tileData = new FlipTileData()
+                        {
+                            Title = template.Title,
+                            BackTitle = template.BackTitle,
+                            BackContent = template.BackContent,
+                            WideBackContent = template.WideBackContent,
+                            Count = template.Count,
+                            SmallBackgroundImage = new Uri(template.SmallBackgroundImage, UriKind.Relative),
+                            BackgroundImage = new Uri(template.BackgroundImage, UriKind.Relative),
+                            BackBackgroundImage = new Uri(template.BackBackgroundImage, UriKind.Relative),
+                            WideBackgroundImage = new Uri(template.WideBackgroundImage, UriKind.Relative),
+                            WideBackBackgroundImage = new Uri(template.WideBackBackgroundImage, UriKind.Relative),
+                        };
+
+                        pinnedDefault.Update(tileData);
+                    }
+                }
+            }
+        }
+
         #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{04b18286-8fb1-4369-bea9-7ca0f4ddb3eb}" Title="Unity Porting Labs Demo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Microsoft Game Labs" Description="" Publisher="Microsoft Game Labs" PublisherID="{6E28B35D-9BD6-497A-9465-357EC654678C}">
+  <App xmlns="" ProductID="{98d6f191-57c9-4cd4-9e9b-82423637d973}" Title="Unity Porting Labs Demo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Microsoft Game Labs" Description="" Publisher="Microsoft Game Labs" PublisherID="{6E28B35D-9BD6-497A-9465-357EC654678C}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
