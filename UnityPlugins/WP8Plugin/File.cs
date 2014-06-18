@@ -9,10 +9,9 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 
 
-namespace UnityPlugins
-{
 	public class File
 	{
+        //public static void ReadAllFile
 		public static bool Exists(string filename, string path = "")
 		{
 			var task = FileHandling.FileExists(ApplicationData.Current.LocalFolder, filename, path);
@@ -53,10 +52,6 @@ namespace UnityPlugins
 			return task.Result;
 		}
 
-		public static void WriteAllBytes()
-		{
-
-		}
 	}
 
 
@@ -250,6 +245,13 @@ namespace UnityPlugins
 			return await file.OpenStreamForWriteAsync();
 		}
 
+        public static async Task<Stream> ReadAllBytes(String text)
+        {
+            //folder = await navigateFrom(folder, path);
+            //StorageFile file = await folder.CreateFileAsync(filename, CreationCollisionOption.OpenIfExists);
+            return await file.OpenStreamForWriteAsync();
+
+        }
 		
 	}
 }

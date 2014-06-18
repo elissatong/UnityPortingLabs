@@ -25,13 +25,13 @@
     <CurrentDeployID>5E7661DF-D928-40ff-B747-A4B1957194F9</CurrentDeployID>
   </PropertyGroup>
   <PropertyGroup>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{C089C8C0-30E0-4E22-80C0-CE093F111A43}">
         <SilverlightMobileCSProjectFlavor>
-          <FullDeploy>False</FullDeploy>
+          <FullDeploy>True</FullDeploy>
           <DebuggerType>Managed</DebuggerType>
           <DebuggerAgentType>Managed</DebuggerAgentType>
           <Tombstone>False</Tombstone>

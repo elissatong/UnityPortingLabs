@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Unity3d\Projects\UnityPortingLabBegin\Assets\Scripts\New\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Unity3d\Projects\UnityPortingLabGZ\UnityPortingLabBegin\Assets\Scripts\WP8\DebugManager.cs">
     <Files>
-      <File FileName="..\..\..\Unity3d\Projects\UnityPortingLabBegin\Assets\Scripts\New\GameManager.cs" Line="20" Column="10" />
+      <File FileName="..\..\..\Unity3d\Projects\UnityPortingLabGZ\UnityPortingLabBegin\Assets\Scripts\WP8\DebugManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
