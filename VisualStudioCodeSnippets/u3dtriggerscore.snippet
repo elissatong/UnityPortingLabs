@@ -1,0 +1,39 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DTriggerScore
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private int score = 0;
+    private float labelWidth = 200.0f;
+    private float labelPosX = 0.0f;
+    private GUIStyle mGUIStyleLabel;
+
+    private void SetGuiLabelStyles()
+    {
+        mGUIStyleLabel = new GUIStyle();
+        mGUIStyleLabel.fontSize = 40;
+        mGUIStyleLabel.fontStyle = FontStyle.Bold;
+        mGUIStyleLabel.alignment = TextAnchor.MiddleCenter;
+        mGUIStyleLabel.normal.textColor = Color.white;
+    }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(labelPosX, 20, labelWidth, 50), "Score: " + score, mGUIStyleLabel);
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        labelPosX = (Screen.width - labelWidth) * 0.5f;
+        SetGuiLabelStyles();
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

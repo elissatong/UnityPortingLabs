@@ -1,0 +1,35 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        PluginMemoryLimitsWP8
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[public static string GetMemoryUsageLimit
+        {
+            get
+            {
+                // WP8.0.
+                ulong committedLimit = Windows.Phone.System.Memory.MemoryManager.ProcessCommittedLimit;
+                return committedLimit.ToString();
+
+            }
+        }
+
+        public static string GetMemoryCurrentUsage
+        {
+            get
+            {
+                // WP8.0.
+                ulong committedBytes = Windows.Phone.System.Memory.MemoryManager.ProcessCommittedBytes;
+                return committedBytes.ToString();
+
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

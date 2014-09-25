@@ -8,9 +8,10 @@
     </Header>
     <Snippet>
       <Code Language="CSharp">
-        <![CDATA[#if (UNITY_WP8 && !UNITY_EDITOR)
-	public float jumpForce = 200f;			// Amount of force added when the player jumps.
-    public int PlayerSpeed = 20;
+        <![CDATA[#if (NETFX_CORE && !UNITY_EDITOR)
+    private float jumpForce = 500f;			
+    private int PlayerSpeed = 20;
+    private float JumpTouchDeltaY = 10.0f;
 #else
     public float jumpForce = 1000f;
     public int PlayerSpeed = 10;

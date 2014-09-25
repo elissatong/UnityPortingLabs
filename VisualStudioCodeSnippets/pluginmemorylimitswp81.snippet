@@ -1,0 +1,35 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        PluginMemoryLimitsWP81
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[public static string GetMemoryUsageLimit
+        {
+            get
+            {
+                // WP8.1.
+                ulong usageLimit = Windows.System.MemoryManager.AppMemoryUsageLimit;
+                ulong bytesToMB = usageLimit / (1024 * 1024);
+                return bytesToMB.ToString() + " MB";
+            }
+        }
+
+        public static string GetMemoryCurrentUsage
+        {
+            get
+            {
+                // WP8.1.
+                ulong currentUsage = Windows.System.MemoryManager.AppMemoryUsage;
+                ulong bytesToMB = currentUsage / (1024 * 1024);
+                return bytesToMB.ToString() + " MB";
+            }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

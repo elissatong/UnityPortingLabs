@@ -1,0 +1,56 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DPlayButton
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[public Texture2D normalButton = null;
+	public Texture2D hoverButton = null;
+
+	private GUIStyle mGUIStyleBtn;
+
+	private float OFFSET = 10;
+	private float BUTTON_SIZE = 200;
+	private float xPos, yPos = 0;
+
+	private void SetGuiStyles()
+	{
+		xPos = Screen.width - OFFSET - BUTTON_SIZE;
+        yPos = Screen.height - OFFSET - BUTTON_SIZE;
+
+		mGUIStyleBtn = new GUIStyle();
+		mGUIStyleBtn.fontSize = 24;
+		mGUIStyleBtn.fontStyle = FontStyle.Bold;
+
+		GUIStyleState styleNormal = new GUIStyleState();
+		styleNormal.background = normalButton;
+
+		GUIStyleState styleHover = new GUIStyleState();
+		styleHover.background = hoverButton;
+
+		mGUIStyleBtn.normal = styleNormal;
+		mGUIStyleBtn.hover = styleHover;
+		mGUIStyleBtn.alignment = TextAnchor.MiddleLeft;
+	}
+
+	void OnGUI()
+	{
+		
+		if (GUI.Button(new Rect(xPos, yPos, BUTTON_SIZE, BUTTON_SIZE), "", mGUIStyleBtn))
+		{
+            Application.LoadLevel("Level");		
+		}
+	}
+	
+    void Start()
+    {
+        SetGuiStyles();
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

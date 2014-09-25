@@ -1,0 +1,34 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DWindowsGatewayUpdated
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[using UnityEngine;
+using System.Collections;
+using System;
+
+/// Windows specific and interop between Unity and Windows Store or Windows Phone 8
+public static class WindowsGateway
+{
+    static WindowsGateway()
+    {
+        UnityLoaded = delegate { };
+        OnClickPlay = delegate { };
+        OnScoreUpdate = delegate { };
+        OnClickBuy = delegate { };
+    }
+
+    public static Action UnityLoaded;
+    public static Action OnClickPlay;
+    public static Action OnScoreUpdate;
+    public static Action OnClickBuy;
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -3,16 +3,17 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>
-        U3DPlayerAccelerometer
+        MemoryPrerequisite
       </Title>
     </Header>
     <Snippet>
-      <Code Language="CSharp">
-        <![CDATA[#if (NETFX_CORE)
-        float h = (PlayerSpeed * Input.acceleration.x) * Time.deltaTime;
-#else
-        float h = Input.GetAxis("Horizontal");
-#endif]]>
+      <Code Language="XML">
+        <![CDATA[
+        xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
+        <Prerequisites>
+  <m3:MinDeviceMemory>1GB</m3:MinDeviceMemory>
+</Prerequisites>
+        ]]>
       </Code>
     </Snippet>
   </CodeSnippet>

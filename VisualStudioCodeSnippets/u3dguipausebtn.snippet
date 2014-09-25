@@ -1,0 +1,48 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2008/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        U3DGuiPauseBtn
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[public Texture2D pauseButton = null;
+    private GUIStyle mGUIStylePause = null;
+    private float BUTTON_SIZE_PAUSE = 120;
+    private float xPosPause = 0.0f;
+    private float yPosPause = 0.0f;
+    private void SetGuiStylesPause()
+    {
+        float halfButtonWidth = BUTTON_SIZE_WIDTH * 0.5f;
+        xPosPause = Screen.width - halfButtonWidth;
+        yPosPause = 0.0f;
+
+        mGUIStylePause = new GUIStyle();
+        mGUIStylePause.fontSize = 24;
+        mGUIStylePause.fontStyle = FontStyle.Bold;
+
+        GUIStyleState styleNormal = new GUIStyleState();
+        styleNormal.background = pauseButton;
+
+        mGUIStylePause.normal = styleNormal;
+        mGUIStylePause.alignment = TextAnchor.MiddleCenter;
+    }
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(xPosPause, yPosPause, BUTTON_SIZE_PAUSE, BUTTON_SIZE_PAUSE), "", mGUIStylePause))
+        {
+            isPaused = true;
+        }
+    }
+    
+    void Start()
+    {
+        SetGuiStylesPause();
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

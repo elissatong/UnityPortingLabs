@@ -3,16 +3,15 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>
-        U3DPlayerAccelerometer
+        U3DOnTriggerEnter
       </Title>
     </Header>
     <Snippet>
       <Code Language="CSharp">
-        <![CDATA[#if (NETFX_CORE)
-        float h = (PlayerSpeed * Input.acceleration.x) * Time.deltaTime;
-#else
-        float h = Input.GetAxis("Horizontal");
-#endif]]>
+        <![CDATA[void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+    }]]>
       </Code>
     </Snippet>
   </CodeSnippet>

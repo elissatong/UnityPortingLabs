@@ -3,16 +3,16 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>
-        U3DPlayerAccelerometer
+        MemoryRequirement
       </Title>
     </Header>
     <Snippet>
-      <Code Language="CSharp">
-        <![CDATA[#if (NETFX_CORE)
-        float h = (PlayerSpeed * Input.acceleration.x) * Time.deltaTime;
-#else
-        float h = Input.GetAxis("Horizontal");
-#endif]]>
+      <Code Language="XML">
+        <![CDATA[
+        <Requirements>
+    <Requirement Name="ID_REQ_MEMORY_300"/>
+  </Requirements>
+        ]]>
       </Code>
     </Snippet>
   </CodeSnippet>
