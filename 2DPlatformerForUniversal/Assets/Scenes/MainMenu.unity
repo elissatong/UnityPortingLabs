@@ -164,8 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ff302d19864df448503557947bc91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalButton: {fileID: 2800000, guid: ed126f247ba6c2140ac50f5331d7cfcb, type: 3}
-  hoverButton: {fileID: 2800000, guid: 4542d2b641dcfce4ca736a2b7517034b, type: 3}
+  texPlayNormal: {fileID: 2800000, guid: ed126f247ba6c2140ac50f5331d7cfcb, type: 3}
+  texPlayHover: {fileID: 2800000, guid: 4542d2b641dcfce4ca736a2b7517034b, type: 3}
+  bkgdTextField: {fileID: 2800000, guid: 90dd995677f10534c854d5c2f3aad583, type: 3}
+  texInputNormal: {fileID: 2800000, guid: 1887b63ac9965114c99a9fe6ce4a6a0b, type: 3}
+  texInputHover: {fileID: 2800000, guid: bd8aab149e8ae504cbdd814e89f7141d, type: 3}
 --- !u!82 &565023088
 AudioSource:
   m_ObjectHideFlags: 0

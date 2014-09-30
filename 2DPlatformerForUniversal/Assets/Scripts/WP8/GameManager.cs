@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
 #region Instance
+
     private static readonly GameManager instance = new GameManager();
     private GameManager() { }
 
@@ -17,9 +18,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Accessible variables
+    public bool isMainMenu = true;
+
+    public void EnablePauseMenu()
+    {
+        isPaused = true;
+        isMainMenu = false;
+    }
     
-    public static bool isMainMenu = true;
+    
 #endregion
 
 #region PAUSE_MENU_BUTTONS // Continue & Quit
@@ -34,7 +41,7 @@ public class GameManager : MonoBehaviour
     private float BUTTON_SIZE_HEIGHT = 50;
     private float xPos, yPos = 0;
 
-    private void SetGuiStyles()
+    private void SetGuiStyleBtn()
     {
         float halfButtonWidth = BUTTON_SIZE_WIDTH * 0.5f;
         xPos = Screen.width * 0.5f - halfButtonWidth;
@@ -59,7 +66,7 @@ public class GameManager : MonoBehaviour
 
 #region PAUSE BUTTON
 
-    public bool isPaused = false;
+    private bool isPaused = false;
 
     public Texture2D pauseButton = null;
     private GUIStyle mGUIStylePause = null;
@@ -126,7 +133,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetGuiLabelStyles();
-        SetGuiStyles();
+        SetGuiStyleBtn();
         SetGuiStylesPause();
     }
         

@@ -6391,9 +6391,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7021512095c7099449529a14d86da63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
-  normalButton: {fileID: 2800000, guid: a6f1c3c1ca4019f48bb7a919bb124bd0, type: 3}
-  hoverButton: {fileID: 2800000, guid: 9f1381d5e5d90e343b94b234e6fc8555, type: 3}
+  isMainMenu: 1
+  normalButton: {fileID: 2800000, guid: 8dc0ec273527b6c4f83283fde791354d, type: 3}
+  hoverButton: {fileID: 2800000, guid: a140e43d10adada4fa289b42415021f7, type: 3}
   pauseButton: {fileID: 2800000, guid: c77557fb7f91a1e48a455d45c46e528f, type: 3}
 --- !u!1 &1400449014
 GameObject:

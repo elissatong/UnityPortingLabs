@@ -90,6 +90,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>References\FlurryWP8SDK.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.dll">
       <HintPath>.\UnityEngine.dll</HintPath>
     </Reference>
@@ -149,7 +152,9 @@
       <HintPath>..\..\Players\WindowsPhone81\$(PlatformTarget)\$(Configuration)\UnityEngineProxy.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Code\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

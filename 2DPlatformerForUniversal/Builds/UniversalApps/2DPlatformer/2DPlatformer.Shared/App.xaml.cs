@@ -26,6 +26,7 @@ namespace Template
 	/// </summary>
 	sealed partial class App : Application
 	{
+        private string FLURRY_API_KEY = "T56F4DGRNMR97PPYC2TZ";
 		private WinRTBridge.WinRTBridge _bridge;
 		private AppCallbacks appCallbacks;
 		/// <summary>
@@ -57,6 +58,9 @@ namespace Template
 					break;
 			}
 			InitializeUnity(appArgs, splashScreen);
+#if UNITY_WP_8_1
+            FlurryWP8SDK.Api.StartSession(FLURRY_API_KEY);
+#endif
 		}
 
 		/// <summary>
@@ -68,7 +72,10 @@ namespace Template
 		protected override void OnLaunched(LaunchActivatedEventArgs args)
 		{
 			InitializeUnity(args.Arguments, args.SplashScreen);
-		}
+#if UNITY_WP_8_1
+            FlurryWP8SDK.Api.StartSession(FLURRY_API_KEY);
+#endif
+        }
 
 		private void InitializeUnity(string args, Windows.ApplicationModel.Activation.SplashScreen splashScreen)
 		{

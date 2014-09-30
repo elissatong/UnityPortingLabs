@@ -40,26 +40,13 @@ namespace Template
 			onResizeHandler = new WindowSizeChangedEventHandler((o, e) => OnResize());
 			Window.Current.SizeChanged += onResizeHandler;
 
-            // Case 2: Direct Communication
             WindowsGateway.OnClickPlay = OnClickPlay;
-
-            // Case 3: Global Instances
-            
-            //GameManager.Instance.
-        //    bool isMainMenu = GameManager.IsMainMenu;
-        //    if (isMainMenu)
-        //    {
-        //        // Do something
-        //    }
         }
 
         private void OnClickPlay()
         {
-            //FlurryAnalytics.LogEvent(Constants.EVENT_PLAY_GAME);
-            //GameManager.isPaused = true;
-            
+            GameManager.Instance.EnablePauseMenu();
         }
-
 
 		/// <summary>
 		/// Invoked when this page is about to be displayed in a Frame.
