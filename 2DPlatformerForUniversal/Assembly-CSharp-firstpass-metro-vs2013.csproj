@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(SolutionDir)UnityCommon.props" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{194D914D-0664-444E-B663-4D0F1C80AF68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>AssemblyCSharpmetro</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <TargetFrameworkVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>bin\Store 8.1\x86\Debug</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\x86\Debug</BaseIntermediateOutputPath>
+	<DefineConstants>DEBUG;TRACE;ENABLE_PROFILER;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.1\x86\Release</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\x86\Release</BaseIntermediateOutputPath>
+	<DefineConstants>TRACE;ENABLE_PROFILER;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Master|x86' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.1\x86\Master</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\x86\Master</BaseIntermediateOutputPath>
+	<DefineConstants>TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>bin\Store 8.1\ARM\Debug</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\ARM\Debug</BaseIntermediateOutputPath>
+	<DefineConstants>DEBUG;TRACE;ENABLE_PROFILER;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.1\ARM\Release</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\ARM\Release</BaseIntermediateOutputPath>
+	<DefineConstants>TRACE;ENABLE_PROFILER;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Master|ARM' ">
+  <DebugSymbols>true</DebugSymbols>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\Store 8.1\ARM\Master</OutputPath>
+  <BaseIntermediateOutputPath>obj\Store 8.1\ARM\Master</BaseIntermediateOutputPath>
+	<DefineConstants>TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_METRO;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_WINRT_PINVOKE;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_PRO_LICENSE;NETFX_CORE;UNITY_METRO_8_1;</DefineConstants>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<UseVSHostingProcess>false</UseVSHostingProcess>
+	<ErrorReport>prompt</ErrorReport>
+	<Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+	<HintPath>$(SolutionDir)$(SolutionName)\$(SolutionName).Windows\Unprocessed\UnityEngine.dll</HintPath>
+</Reference>
+<Reference Include="WinRTLegacy">
+	<HintPath>$(SolutionDir)$(SolutionName)\$(SolutionName).Windows\Unprocessed\WinRTLegacy.dll</HintPath>
+</Reference>
+<Reference Include="UnityPlugins">
+	<HintPath>$(SolutionDir)$(SolutionName)\$(SolutionName).Windows\UnityPlugins.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    		<Compile Include="Assets\**\Plugins\**\*.cs; Assets\Standard Assets\**\*.cs; Assets\Pro Standard Assets\**\*.cs; Assets\Standard Assets (Mobile)\**\*.cs; Assets\Resources\**\*.cs" Exclude="Assets\**\Editor\**\*.cs;@(None)" />
+
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <CleanDependsOn>$(CleanDependsOn);CleanSerializationWeaver</CleanDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SerializationWeaverUnprocessedDir>$(TargetDir)Unprocessed\</SerializationWeaverUnprocessedDir>
+  </PropertyGroup>
+  <Target Name="AfterCompile">
+    <Message Importance="high" Text="Running Serialization Weaver..." />
+    <Exec Command="&quot;$(UnityWSAPlayerDir)\Tools\SerializationWeaver\SerializationWeaver.exe&quot; &quot;@(IntermediateAssembly-&gt;'%(FullPath)')&quot; -pdb -verbose -unity-engine=&quot;$(SolutionDir)$(SolutionName)\$(SolutionName).Windows\Unprocessed\UnityEngine.dll&quot; &quot;$(SerializationWeaverUnprocessedDir.TrimEnd('\'))&quot;" />
+    <Message Importance="high" Text="Serialization Weaver done." />
+  </Target>
+  <Target Name="CleanSerializationWeaver">
+    <Delete Files="$(SerializationWeaverUnprocessedDir)$(TargetFileName)" />
+    <Delete Files="$(SerializationWeaverUnprocessedDir)$(TargetName).pdb" />
+  </Target>
+</Project>

@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\players\windows81\x86\master\bridgeinterface.winmd" HashGuid="3dada92f-87c6-9b24-3f0e-5c07adc634cd" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\players\windows81\x86\master\unityenginedelegates.winmd" HashGuid="d5bfa646-8453-25f8-b5ef-24280c447d94" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\players\windows81\x86\master\unityengineproxy.dll" HashGuid="7f426e64-fec6-48a6-c28a-182cf876e502" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\players\windows81\x86\master\unityplayer.winmd" HashGuid="325c3326-5f3a-8d33-be61-e51ffe924550" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\2dplatformer\2dplatformer.windows\unityplugins.dll" HashGuid="cfce6a19-d162-c271-13d7-d070a64488ee" />
+    <ReferenceAssembly PathName="c:\users\elistong\documents\github\unityportinglabs\2dplatformer\builds\universalapps\players\windows81\x86\master\winrtbridge.winmd" HashGuid="ff681780-71d1-a68c-eca6-e78470dc52ea" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
