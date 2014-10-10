@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MainManager : MonoBehaviour {
+public class MainManager : MonoBehaviour
+{
 
     // Play button style, position, & background textures
-	public Texture2D texPlayNormal = null;
+    public Texture2D texPlayNormal = null;
     public Texture2D texPlayHover = null;
-	private GUIStyle mGUIStyleBtnPlay = null;
-	private float OFFSET = 10;
-	private float BUTTON_SIZE = 200;
-	private float xPos, yPos = 0;
+    private GUIStyle mGUIStyleBtnPlay = null;
+    private float OFFSET = 10;
+    private float BUTTON_SIZE = 200;
+    private float xPos, yPos = 0;
 
     // Register input buttons
 
+    #region LOGIN KEYBOARD
     public enum LoginState
     {
         Default,
@@ -31,23 +33,33 @@ public class MainManager : MonoBehaviour {
     private float TEXTFIELD_WIDTH = 300;
     private int LABEL_FONT_SIZE = 32;
     private float xLoginBtn, xCancelBtn, xTextField = 0;
-    
+
     private GUIStyle mGUIStyleBtnInput;
     private GUIStyle mGUIStyleLabel;
     public Texture2D bkgdTextField = null;
     TouchScreenKeyboard mKeyboard = null;
+
     string mInputUserName = "";
     GUIStyle mGUIStyleTextField = null;
-    
+
     public Texture2D texInputNormal = null;
     public Texture2D texInputHover = null;
 
+
+    // Flag to prevent the multiple calls to Input.GetMouseButtonDown that keeps opening & closing the keyboard
+    bool isMouseDownOnInputField = false;
+
+    // Return from the database if the username login is correct
     private bool isLoginSuccess = false;
+
+    // Display a message to a GUI.Label on the screen
     private string successMessage = "";
 
-    Rect mRectTextField; 
+    // Store the Username Input Field to a Rect which is used for collision detection if mouse clicked on it
+    Rect mRectTextField;
 
-    
+    #endregion // LOGIN KEYBOARD
+
 
     private void SetGuiStyleTextField()
     {
@@ -65,8 +77,8 @@ public class MainManager : MonoBehaviour {
         }
     }
 
-	private void SetGuiStyles(ref GUIStyle guiStyle, Texture2D normal, Texture2D hover)
-	{
+    private void SetGuiStyles(ref GUIStyle guiStyle, Texture2D normal, Texture2D hover)
+    {
         if (guiStyle == null)
         {
             guiStyle = new GUIStyle();
@@ -83,7 +95,7 @@ public class MainManager : MonoBehaviour {
             guiStyle.hover = styleHover;
             guiStyle.alignment = TextAnchor.MiddleCenter;
         }
-	}
+    }
 
     private void SetGuiLabel(ref GUIStyle guiStyle)
     {
@@ -97,9 +109,27 @@ public class MainManager : MonoBehaviour {
         }
     }
 
-	void OnGUI()
+
+    void SetupKeyboard()
     {
-#region KEYBOARD LOGIC
+        #region LOGIN KEYBOARD
+        // Setup Input Buttons
+        isLoginSuccess = false;
+        xLoginBtn = INPUT_OFFSET;
+        xCancelBtn = xLoginBtn + INPUT_WIDTH + INPUT_OFFSET;
+        xTextField = xCancelBtn + INPUT_OFFSET + INPUT_WIDTH;
+
+        mInputUserName = "";
+        mRectTextField = new Rect(xTextField, INPUT_OFFSET, TEXTFIELD_WIDTH, INPUT_HEIGHT);
+        SetGuiStyleTextField();
+        SetGuiStyles(ref mGUIStyleBtnInput, texInputNormal, texInputHover);
+        SetGuiLabel(ref mGUIStyleLabel);
+        #endregion //LOGIN KEYBOARD
+    }
+
+    void OnGUI()
+    {
+        #region LOGIN KEYBOARD
         if (mLoginState == LoginState.Default)
         {
             // Only show the Login Success message when LoginState.Default mode.
@@ -114,6 +144,7 @@ public class MainManager : MonoBehaviour {
                 if (mKeyboard == null)
                 {
                     mKeyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, true, false, false, false);
+                    mKeyboard.active = true;
                 }
                 else if (!mKeyboard.active)
                 {
@@ -127,16 +158,16 @@ public class MainManager : MonoBehaviour {
             //mInputUserName = GUI.TextField(new Rect(xTextField, INPUT_OFFSET, TEXTFIELD_WIDTH, INPUT_HEIGHT), mInputUserName, 16, mGUIStyleTextField);
 
             GUI.Label(mRectTextField, mInputUserName, mGUIStyleTextField);
-            if (!mKeyboard.active && mRectTextField.Contains(Event.current.mousePosition) && Input.GetMouseButtonDown(0))
+            if (!isMouseDownOnInputField && !mKeyboard.active && mRectTextField.Contains(Event.current.mousePosition) && Input.GetMouseButtonDown(0))
             {
-                mKeyboard.active = true;
+                isMouseDownOnInputField = true;
             }
 
             if (GUI.Button(new Rect(xLoginBtn, INPUT_OFFSET, INPUT_WIDTH, INPUT_HEIGHT), INPUT_BTN_CONFIRM, mGUIStyleBtnInput))
             {
                 // TODO: Check database for login information. 
-                
-                
+
+
                 // RETURN: When user confirms login, check login information is correct
                 isLoginSuccess = true;
                 successMessage = "Welcome, " + mInputUserName + "!";
@@ -148,42 +179,34 @@ public class MainManager : MonoBehaviour {
                 mLoginState = LoginState.Default;
             }
         }
-#endregion // KEYBOARD LOGIC
+        #endregion // LOGIN KEYBOARD
 
         if (GUI.Button(new Rect(xPos, yPos, BUTTON_SIZE, BUTTON_SIZE), "", mGUIStyleBtnPlay))
-		{
+        {
             WindowsGateway.OnClickPlay();
             Application.LoadLevel("Level");
-		}
-	}
-	
+        }
+    }
+
+
+
     void Start()
     {
         // Setup Play Button
         xPos = Screen.width - OFFSET - BUTTON_SIZE;
         yPos = Screen.height - OFFSET - BUTTON_SIZE;
         SetGuiStyles(ref mGUIStyleBtnPlay, texPlayNormal, texPlayHover);
-        
-        // Setup Input Buttons
-        isLoginSuccess = false;
-        xLoginBtn = INPUT_OFFSET;
-        xCancelBtn = xLoginBtn + INPUT_WIDTH + INPUT_OFFSET;
-        xTextField = xCancelBtn + INPUT_OFFSET + INPUT_WIDTH;
 
-        mInputUserName = "";
-        mRectTextField = new Rect(xTextField, INPUT_OFFSET, TEXTFIELD_WIDTH, INPUT_HEIGHT);
-        SetGuiStyleTextField();
-        SetGuiStyles(ref mGUIStyleBtnInput, texInputNormal, texInputHover);
-        SetGuiLabel(ref mGUIStyleLabel);
+        SetupKeyboard();
 
-        mKeyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, true, false, false, false);
-        mKeyboard.active = false;
     }
 
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
 
+        #region LOGIN KEYBOARD
         if (mKeyboard != null)
         {
             if (mKeyboard.active)
@@ -196,11 +219,25 @@ public class MainManager : MonoBehaviour {
         }
 
 
+        if (isMouseDownOnInputField)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                mKeyboard.active = true;
+                isMouseDownOnInputField = false;
+            }
+        }
+        #endregion // LOGIN KEYBOARD
 
+
+#region BACKBUTTON
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("ESCAPE Input key down");
             Application.Quit();
         }
-	}
+#endregion // BACKBUTTON
+
+    }
+
 }
